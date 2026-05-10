@@ -1,0 +1,85 @@
+{
+    "open": {
+        "finger_1_joint_1": 0,
+        "finger_1_joint_2": 0,
+        "finger_1_joint_3": -0.0523,
+        "finger_2_joint_1": 0,
+        "finger_2_joint_2": 0,
+        "finger_2_joint_3": -0.0523,
+        "finger_middle_joint_1": 0.0495,
+        "finger_middle_joint_2": 0,
+        "finger_middle_joint_3": -0.0523
+    },
+    "close": {
+        "finger_1_joint_1": 1.2218,
+        "finger_1_joint_2": 1.5708,
+        "finger_1_joint_3": -1.2217,
+        "finger_2_joint_1": 1.2218,
+        "finger_2_joint_2": 1.5708,
+        "finger_2_joint_3": -1.2217,
+        "finger_middle_joint_1": 1.2218,
+        "finger_middle_joint_2": 1.5708,
+        "finger_middle_joint_3": -1.2217
+    },
+    "fingertip": [
+        0.0,
+        0.0,
+        0.19
+    ],
+    "sweep_volume": {
+        "extents": [
+            0.11,
+            0.05,
+            0.06
+        ],
+        "offset": [
+            0.0,
+            0.0,
+            0.17
+        ],
+        "extents2": [
+            0.045,
+            0.05,
+            0.05
+        ],
+        "offset2": [
+            0.0,
+            0.0,
+            0.13
+        ]
+    },
+    "links": [
+        "world",
+        "finger_1_link_0",
+        "finger_1_link_1",
+        "finger_1_link_2",
+        "finger_1_link_3",
+        "finger_2_link_0",
+        "finger_2_link_1",
+        "finger_2_link_2",
+        "finger_2_link_3",
+        "finger_middle_link_0",
+        "finger_middle_link_1",
+        "finger_middle_link_2",
+        "finger_middle_link_3",
+        "palm"
+    ],
+    "standoff": [
+        0.0,
+        0.025
+    ],
+    "bbox": [
+        [
+            -0.11062449067661315,
+            -0.065087549610872,
+            -7.506004941956745e-05
+        ],
+        [
+            0.10648234572402451,
+            0.06508748428333176,
+            0.21948041703894267
+        ]
+    ],
+    "symmetric": false,
+    "type": "revolute_3f"
+}

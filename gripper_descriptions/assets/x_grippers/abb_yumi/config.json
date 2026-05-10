@@ -1,0 +1,59 @@
+{
+    "open": {
+        "gripper_r_joint": 0.025
+    },
+    "close": {
+        "gripper_r_joint": 0.0
+    },
+    "fingertip": [
+        0.0,
+        0.0,
+        0.125
+    ],
+    "sweep_volume": {
+        "extents": [
+            0.05,
+            0.015,
+            0.04
+        ],
+        "offset": [
+            0.0,
+            0.0,
+            0.115
+        ],
+        "extents2": [
+            0.025,
+            0.015,
+            0.04
+        ],
+        "offset2": [
+            0.0,
+            0.0,
+            0.115
+        ]
+    },
+    "links": [
+        "world",
+        "gripper_r_base",
+        "gripper_r_finger_r",
+        "gripper_r_finger_l"
+    ],
+    "standoff": [
+        0.0,
+        0.02
+    ],
+    "bbox": [
+        [
+            -0.041562505066394806,
+            -0.034500014036893845,
+            -4.785733267453907e-07
+        ],
+        [
+            0.04156218841671944,
+            0.03450000286102295,
+            0.135856250923872
+        ]
+    ],
+    "symmetric": true,
+    "type": "parallel_2f"
+}

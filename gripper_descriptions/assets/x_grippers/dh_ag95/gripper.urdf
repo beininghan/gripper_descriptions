@@ -1,0 +1,220 @@
+<?xml version="1.0" ?>
+<robot name="dh_robotics_ag95_gripper" xmlns:xacro="http://ros.org/wiki/xacro">
+  <link name="world"/>
+  <joint name="world_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="world"/>
+    <child link="gripper_base_link"/>
+  </joint>
+  <link name="gripper_base_link">
+    <visual>
+        <geometry>
+          <mesh filename="./meshes/visual/base_link.STL"  scale = "0.001 0.001 0.001"/>
+        </geometry>
+    </visual>
+    <collision>
+        <geometry>
+            <mesh filename="./meshes/collision/base_link_cvx0.obj"  scale = "0.001 0.001 0.001"/>
+        </geometry>
+    </collision>
+  </link>
+
+  <joint name="gripper_finger1_joint" type="revolute">
+    <parent link="gripper_base_link"/>
+    <child link="gripper_finger1_knuckle_link"/>
+    <axis xyz="0 -1 0"/>
+    <origin rpy="0.0 0.0 3.14" xyz="-0.016 0 0.10586"/>
+    <limit lower="0.0" upper="0.6524" velocity="2.0" effort="100"/>
+  </joint>
+  <joint name="gripper_finger2_joint" type="revolute">
+    <parent link="gripper_base_link"/>
+    <child link="gripper_finger2_knuckle_link"/>
+    <axis xyz="0 -1 0"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.016  0 0.10586 "/>
+    <limit lower="-3.14" upper="3.14" velocity="2.0" effort="100"/>
+    <mimic joint="gripper_finger1_joint"/>
+  </joint>
+
+  <link name="gripper_finger1_knuckle_link">
+    <visual>
+        <geometry>
+            <mesh filename="./meshes/visual/crank_Link.STL"  scale = "0.001 0.001 0.001"/>
+        </geometry>
+    </visual>
+    <collision>
+         <geometry>
+             <mesh filename="./meshes/collision/crank_Link_cvx0.obj"  scale = "0.001 0.001 0.001"/>
+         </geometry>
+    </collision>
+  </link>
+  <link name="gripper_finger2_knuckle_link">
+    <visual>
+         <geometry>
+             <mesh filename="./meshes/visual/crank_Link.STL"  scale = "0.001 0.001 0.001"/>
+         </geometry>
+    </visual>
+    <collision>
+         <geometry>
+             <mesh filename="./meshes/collision/crank_Link_cvx0.obj"  scale = "0.001 0.001 0.001"/>
+         </geometry>
+    </collision>
+  </link>
+
+  <joint name="gripper_finger1_finger_joint" type="revolute">
+    <parent link="gripper_finger1_knuckle_link"/>
+    <child link="gripper_finger1_finger_link"/>
+    <axis xyz="0 -1 0"/>
+    <origin xyz="0.0292080077784 0.0 -0.0227132622407" rpy="0 0 0" />
+    <limit lower="-3.14" upper="3.14" velocity="2.0" effort="100.0"/>
+    <mimic joint="gripper_finger1_joint" multiplier="0.4563942"/>
+  </joint>
+
+  <joint name="gripper_finger2_finger_joint" type="revolute">
+     <parent link="gripper_finger2_knuckle_link"/>
+     <child link="gripper_finger2_finger_link"/>
+     <axis xyz="0 -1 0"/>
+     <origin xyz="0.0292080077784 0.0 -0.0227132622407" rpy="0 0 0" />
+     <limit lower="-3.14" upper="3.14" velocity="2.0" effort="100.0"/>
+     <mimic joint="gripper_finger1_joint" multiplier="0.4563942"/>
+  </joint>
+
+  <link name="gripper_finger1_finger_link">
+     <visual>
+         <geometry>
+             <mesh filename="./meshes/visual/rod_Link.STL"  scale = "0.001 0.001 0.001"/>
+         </geometry>
+     </visual>
+     <collision>
+         <geometry>
+             <mesh filename="./meshes/collision/rod_Link_cvx0.obj"  scale = "0.001 0.001 0.001"/>
+         </geometry>
+     </collision>
+  </link>
+  <link name="gripper_finger2_finger_link">
+    <visual>
+        <geometry>
+            <mesh filename="./meshes/visual/rod_Link.STL"  scale = "0.001 0.001 0.001"/>
+        </geometry>
+    </visual>
+    <collision>
+        <geometry>
+            <mesh filename="./meshes/collision/rod_Link_cvx0.obj"  scale = "0.001 0.001 0.001"/>
+        </geometry>
+    </collision>
+  </link>
+
+  <joint name="gripper_finger1_inner_knuckle_joint" type="revolute">
+    <parent link="gripper_base_link"/>
+    <child link="gripper_finger1_inner_knuckle_link"/>
+    <axis xyz="0 -1 0"/>
+    <origin rpy="0.0 0.0 3.14" xyz="-0.016 0 0.10586"/>
+    <limit lower="-3.14" upper="3.14" velocity="2.0" effort="100.0"/>
+    <mimic joint="gripper_finger1_joint" multiplier="1.49462955"/>
+ </joint>
+  <joint name="gripper_finger2_inner_knuckle_joint" type="revolute">
+    <parent link="gripper_base_link"/>
+    <child link="gripper_finger2_inner_knuckle_link"/>
+    <axis xyz="0 -1 0"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.016 0 0.10586"/>
+    <limit lower="-3.14" upper="3.14" velocity="2.0" effort="100.0"/>
+    <mimic joint="gripper_finger1_joint" multiplier="1.49462955"/>
+  </joint>
+
+  <link name="gripper_finger1_inner_knuckle_link">
+    <visual>
+        <geometry>
+            <mesh filename="./meshes/visual/proximal_phalanx_Link.STL"  scale = "0.001 0.001 0.001"/>
+        </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="./meshes/collision/proximal_phalanx_Link_cvx0.obj"  scale = "0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="./meshes/collision/proximal_phalanx_Link_cvx1.obj"  scale = "0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="./meshes/collision/proximal_phalanx_Link_cvx2.obj"  scale = "0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="./meshes/collision/proximal_phalanx_Link_cvx3.obj"  scale = "0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="gripper_finger2_inner_knuckle_link">
+    <visual>
+      <geometry>
+        <mesh filename="./meshes/visual/proximal_phalanx_Link.STL"  scale = "0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="./meshes/collision/proximal_phalanx_Link_cvx0.obj"  scale = "0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="./meshes/collision/proximal_phalanx_Link_cvx1.obj"  scale = "0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="./meshes/collision/proximal_phalanx_Link_cvx2.obj"  scale = "0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+    <collision>
+      <geometry>
+        <mesh filename="./meshes/collision/proximal_phalanx_Link_cvx3.obj"  scale = "0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="gripper_finger1_finger_tip_joint" type="revolute">
+    <parent link="gripper_finger1_inner_knuckle_link"/>
+    <child link="gripper_finger1_finger_tip_link"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="0.0394969463769 0.0 0.0382752038125 " rpy="0.0 0.0 0.0"/>
+    <limit lower="-3.14" upper="3.14" velocity="2.0" effort="100.0"/>
+    <mimic joint="gripper_finger1_joint" multiplier="1.49462955"/>
+  </joint>
+  <joint name="gripper_finger2_finger_tip_joint" type="revolute">
+    <parent link="gripper_finger2_inner_knuckle_link"/>
+    <child link="gripper_finger2_finger_tip_link"/>
+    <axis xyz="0 1 0"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0394969463769  0.0 0.0382752038125  "/>
+    <limit lower="-3.14" upper="3.14" velocity="2.0" effort="100.0"/>
+    <mimic joint="gripper_finger1_joint" multiplier="1.49462955"/>
+  </joint>
+
+  <link name="gripper_finger1_finger_tip_link">
+    <visual>
+        <geometry>
+            <mesh filename="./meshes/visual/distal_phalanx_Link.STL"  scale = "0.001 0.001 0.001"/>
+        </geometry>
+    </visual>
+    <collision>
+        <geometry>
+            <mesh filename="./meshes/collision/distal_phalanx_Link_cvx0.obj"  scale = "0.001 0.001 0.001"/>
+        </geometry>
+    </collision>
+  </link>
+  <link name="gripper_finger2_finger_tip_link">
+    <visual>
+        <geometry>
+            <mesh filename="./meshes/visual/distal_phalanx_Link.STL"  scale = "0.001 0.001 0.001"/>
+        </geometry>
+    </visual>
+    <collision>
+        <geometry>
+            <mesh filename="./meshes/collision/distal_phalanx_Link_cvx0.obj"  scale = "0.001 0.001 0.001"/>
+        </geometry>
+    </collision>
+  </link>
+</robot>
+

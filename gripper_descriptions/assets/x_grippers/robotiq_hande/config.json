@@ -1,0 +1,59 @@
+{
+    "open": {
+        "hande_robotiq_hande_base_to_left_finger": 0.025
+    },
+    "close": {
+        "hande_robotiq_hande_base_to_left_finger": 0.0
+    },
+    "fingertip": [
+        0.0,
+        0.0,
+        0.133
+    ],
+    "sweep_volume": {
+        "extents": [
+            0.05,
+            0.023,
+            0.02
+        ],
+        "offset": [
+            0.0,
+            0.0,
+            0.135
+        ],
+        "extents2": [
+            0.025,
+            0.023,
+            0.02
+        ],
+        "offset2": [
+            0.0,
+            0.0,
+            0.135
+        ]
+    },
+    "links": [
+        "world",
+        "hande_robotiq_hande_base_link",
+        "hande_robotiq_hande_left_finger",
+        "hande_robotiq_hande_right_finger"
+    ],
+    "standoff": [
+        0.0,
+        0.005
+    ],
+    "bbox": [
+        [
+            -0.03749999999969001,
+            -0.0375000649635178,
+            -0.005100066109934132
+        ],
+        [
+            0.03750000022368362,
+            0.03749998861254339,
+            0.14600002758497233
+        ]
+    ],
+    "symmetric": true,
+    "type": "parallel_2f"
+}

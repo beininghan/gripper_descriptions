@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="X5A">
+
+  <link name="hand_x_link"></link>
+  <link name="hand_y_link"></link>
+  <link name="hand_z_link"></link>
+  <link name="hand_spherical_link"></link>
+
+  <joint name="hand_x_joint" type="prismatic">
+    <parent link="hand_x_link"/>
+    <child link="hand_y_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <dynamics damping="10.0"/>
+    <limit effort="200" lower="-100.0" upper="100.0" velocity="1.0"/>
+  </joint>
+  <joint name="hand_y_joint" type="prismatic">
+    <parent link="hand_y_link"/>
+    <child link="hand_z_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="10.0"/>
+    <limit effort="200" lower="-100.0" upper="100.0" velocity="1.0"/>
+  </joint>
+  <joint name="hand_z_joint" type="prismatic">
+    <parent link="hand_z_link"/>
+    <child link="hand_spherical_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="10.0"/>
+    <limit effort="200" lower="-100.0" upper="100.0" velocity="1.0"/>
+  </joint>
+
+  <joint name="spherical_joint" type="spherical">
+    <parent link="hand_spherical_link"/>
+    <child link="world"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <limit effort="1000.0" lower="-4" upper="4" velocity="100"/>
+  </joint>
+
+   <link name="world"/>
+   <joint name="world_joint" type="fixed">
+     <parent link="world"/>
+     <child link="link6"/>
+     <origin rpy="0 -1.5708 1.5708" xyz="0 0 0"/>
+   </joint>
+
+  <link name="link6">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/link6.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/link6_cvx0.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/link6_cvx1.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/link6_cvx2.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/link6_cvx3.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/link6_cvx4.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="link7">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/link7.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/link7_cvx0.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/link7_cvx1.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/link7_cvx2.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint7" type="prismatic">
+    <origin xyz="0.08657 0.024896 -0.0002436" rpy="0 0 0" />
+    <parent link="link6" />
+    <child link="link7" />
+    <axis xyz="0 1 0" />
+    <limit lower="0" upper="0.044" effort="100" velocity="1" />
+  </joint>
+  <link name="link8">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/link8.STL" />
+      </geometry>
+      <material  name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/link8_cvx0.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/link8_cvx1.obj" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/link8_cvx2.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint8" type="prismatic">
+    <origin xyz="0.08657 -0.0249 -0.00024366" rpy="0 0 0" />
+    <parent link="link6" />
+    <child link="link8" />
+    <axis xyz="0 -1 0" />
+    <limit lower="0" upper="0.044" effort="100" velocity="1" />
+    <mimic joint="joint7" multiplier="1" offset="0"/>
+  </joint>
+</robot>

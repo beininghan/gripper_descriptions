@@ -1,0 +1,111 @@
+<robot name="fetch">
+
+  <link name="hand_x_link"></link>
+  <link name="hand_y_link"></link>
+  <link name="hand_z_link"></link>
+  <link name="hand_spherical_link"></link>
+
+  <joint name="hand_x_joint" type="prismatic">
+    <parent link="hand_x_link"/>
+    <child link="hand_y_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <dynamics damping="10.0"/>
+    <limit effort="200" lower="-100.0" upper="100.0" velocity="1.0"/>
+  </joint>
+  <joint name="hand_y_joint" type="prismatic">
+    <parent link="hand_y_link"/>
+    <child link="hand_z_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="10.0"/>
+    <limit effort="200" lower="-100.0" upper="100.0" velocity="1.0"/>
+  </joint>
+  <joint name="hand_z_joint" type="prismatic">
+    <parent link="hand_z_link"/>
+    <child link="hand_spherical_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="10.0"/>
+    <limit effort="200" lower="-100.0" upper="100.0" velocity="1.0"/>
+  </joint>
+
+  <joint name="spherical_joint" type="spherical">
+    <parent link="hand_spherical_link"/>
+    <child link="world"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <limit effort="1000.0" lower="-4" upper="4" velocity="100"/>
+  </joint>
+
+  <link name="world"/>
+  <joint name="world_joint" type="fixed">
+    <parent link="world"/>
+    <child link="gripper_link"/>
+    <origin rpy="1.5708 -1.5708 0" xyz="0 0 0.1540"/>
+  </joint>
+  <link name="gripper_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/gripper_link_cvx0.obj" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="./meshes/gripper_link_cvx0.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="r_gripper_finger_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0.101425 0" />
+      <geometry>
+        <mesh filename="./meshes/r_gripper_finger_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.356 0.361 0.376 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0.101425 0" />
+      <geometry>
+        <mesh filename="./meshes/r_gripper_finger_link_cvx0.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="r_gripper_finger_joint" type="prismatic">
+    <origin rpy="0 0 0" xyz="0 0.015425 0" />
+    <parent link="gripper_link" />
+    <child link="r_gripper_finger_link" />
+    <axis xyz="0 1 0" />
+    <limit effort="200" lower="0.0" upper="0.05" velocity="0.2" />
+    <dynamics damping="1.0" />
+  </joint>
+  <link name="l_gripper_finger_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 -0.101425 0" />
+      <geometry>
+        <mesh filename="./meshes/l_gripper_finger_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.356 0.361 0.376 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 -0.101425 0" />
+      <geometry>
+        <mesh filename="./meshes/l_gripper_finger_link_cvx0.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="l_gripper_finger_joint" type="prismatic">
+    <origin rpy="0 0 0" xyz="0 -0.015425 0" />
+    <parent link="gripper_link" />
+    <child link="l_gripper_finger_link" />
+    <axis xyz="0 -1 0" />
+    <limit effort="200" lower="0.0" upper="0.05" velocity="0.2" />
+    <dynamics damping="1.0" />
+    <mimic joint="r_gripper_finger_joint"/>
+  </joint>
+</robot>

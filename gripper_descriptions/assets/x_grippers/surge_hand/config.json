@@ -1,0 +1,85 @@
+{
+    "open": {
+        "Index_MCP_Joint": 0,
+        "Index_PIP_Joint": 0,
+        "Middle_MCP_Joint": 0,
+        "Middle_PIP_Joint": 0,
+        "Ring_MCP_Joint": 0,
+        "Ring_PIP_Joint": 0,
+        "Pinky_MCP_Joint": 0,
+        "Pinky_PIP_Joint": 0,
+        "Metacarpal_Joint": 1.774,
+        "Thumb_Joint": 0
+    },
+    "close": {
+        "Index_MCP_Joint": 1.774,
+        "Index_PIP_Joint": 1.571,
+        "Middle_MCP_Joint": 1.774,
+        "Middle_PIP_Joint": 1.571,
+        "Ring_MCP_Joint": 1.774,
+        "Ring_PIP_Joint": 1.571,
+        "Pinky_MCP_Joint": 1.774,
+        "Pinky_PIP_Joint": 1.571,
+        "Metacarpal_Joint": 1.774,
+        "Thumb_Joint": 1.774
+    },
+    "fingertip": [
+        0.0,
+        0.0,
+        0.12
+    ],
+    "sweep_volume": {
+        "extents": [
+            0.08,
+            0.05,
+            0.03
+        ],
+        "offset": [
+            0.0,
+            0.0,
+            0.11
+        ],
+        "extents2": [
+            0.035,
+            0.05,
+            0.035
+        ],
+        "offset2": [
+            0.0,
+            0.0,
+            0.1
+        ]
+    },
+    "links": [
+        "world",
+        "Palm",
+        "Index_Proximal",
+        "Index_Distal",
+        "Middle_Proximal",
+        "Middle_Distal",
+        "Ring_Proximal",
+        "Ring_Distal",
+        "Pinky_Proximal",
+        "Pinky_Distal",
+        "Metacarpal",
+        "Thumb"
+    ],
+    "standoff": [
+        0.0,
+        0.005
+    ],
+    "bbox": [
+      [
+        -0.103,
+        -0.0448,
+        -0.0
+      ],
+      [
+        0.0918,
+        0.0483,
+        0.1328
+      ]
+    ],
+    "symmetric": false,
+    "type": "revolute_3f"
+}

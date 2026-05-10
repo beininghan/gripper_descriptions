@@ -1,0 +1,119 @@
+{
+    "open": {
+        "right_finger1_joint1": 0.4,
+        "right_finger1_joint2": -0.1,
+        "right_finger1_joint3": 0.0,
+        "right_finger1_joint4": 0.0,
+        "right_finger2_joint1": 0.0,
+        "right_finger2_joint2": 0.2,
+        "right_finger2_joint3": 0.0,
+        "right_finger2_joint4": 0.0,
+        "right_finger3_joint1": 0.0,
+        "right_finger3_joint2": 0.0,
+        "right_finger3_joint3": 0.0,
+        "right_finger3_joint4": 0.0,
+        "right_finger4_joint1": 0.0,
+        "right_finger4_joint2": 0.0,
+        "right_finger4_joint3": 0.0,
+        "right_finger4_joint4": 0.0,
+        "right_finger5_joint1": 0.0,
+        "right_finger5_joint2": 0.0,
+        "right_finger5_joint3": 0.0,
+        "right_finger5_joint4": 0.0
+    },
+    "close": {
+        "right_finger1_joint1": 1.2,
+        "right_finger1_joint2": 0.1,
+        "right_finger1_joint3": 1.2,
+        "right_finger1_joint4": 1.0,
+        "right_finger2_joint1": 1.2,
+        "right_finger2_joint2": 0.2,
+        "right_finger2_joint3": 1.2,
+        "right_finger2_joint4": 1.2,
+        "right_finger3_joint1": 1.2,
+        "right_finger3_joint2": 0.0,
+        "right_finger3_joint3": 1.2,
+        "right_finger3_joint4": 1.2,
+        "right_finger4_joint1": 1.2,
+        "right_finger4_joint2": 0.0,
+        "right_finger4_joint3": 1.2,
+        "right_finger4_joint4": 1.2,
+        "right_finger5_joint1": 1.2,
+        "right_finger5_joint2": 0.0,
+        "right_finger5_joint3": 1.2,
+        "right_finger5_joint4": 1.2
+    },
+    "fingertip": [
+        0.0,
+        0.0,
+        0.105
+    ],
+    "sweep_volume": {
+        "extents": [
+            0.06,
+            0.06,
+            0.04
+        ],
+        "offset": [
+            0.0,
+            0.0,
+            0.09
+        ],
+        "extents2": [
+            0.04,
+            0.06,
+            0.04
+        ],
+        "offset2": [
+            0.0,
+            0.0,
+            0.09
+        ]
+    },
+    "links": [
+        "right_palm_link",
+        "right_finger1_link1",
+        "right_finger1_link2",
+        "right_finger1_link3",
+        "right_finger1_link4",
+        "right_finger1_tip_link",
+        "right_finger2_link1",
+        "right_finger2_link2",
+        "right_finger2_link3",
+        "right_finger2_link4",
+        "right_finger2_tip_link",
+        "right_finger3_link1",
+        "right_finger3_link2",
+        "right_finger3_link3",
+        "right_finger3_link4",
+        "right_finger3_tip_link",
+        "right_finger4_link1",
+        "right_finger4_link2",
+        "right_finger4_link3",
+        "right_finger4_link4",
+        "right_finger4_tip_link",
+        "right_finger5_link1",
+        "right_finger5_link2",
+        "right_finger5_link3",
+        "right_finger5_link4",
+        "right_finger5_tip_link"
+    ],
+    "standoff": [
+        0.0,
+        0.005
+    ],
+    "symmetric": false,
+    "type": "revolute_3f",
+    "bbox": [
+        [
+            -0.11811739,
+            -0.06146967,
+            -0.00569379
+        ],
+        [
+            0.07448912,
+            0.11619675,  
+            0.10822587
+        ]
+    ]
+}

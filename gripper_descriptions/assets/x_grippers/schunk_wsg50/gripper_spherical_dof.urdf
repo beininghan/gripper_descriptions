@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<robot name="wsg_50">
+ <!-- BASE LINK -->
+  <link name="hand_x_link"></link>
+  <link name="hand_y_link"></link>
+  <link name="hand_z_link"></link>
+  <link name="hand_spherical_link"></link>
+
+  <joint name="hand_x_joint" type="prismatic">
+    <parent link="hand_x_link"/>
+    <child link="hand_y_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <dynamics damping="10.0"/>
+    <limit effort="200" lower="-100.0" upper="100.0" velocity="1.0"/>
+  </joint>
+  <joint name="hand_y_joint" type="prismatic">
+    <parent link="hand_y_link"/>
+    <child link="hand_z_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="10.0"/>
+    <limit effort="200" lower="-100.0" upper="100.0" velocity="1.0"/>
+  </joint>
+  <joint name="hand_z_joint" type="prismatic">
+    <parent link="hand_z_link"/>
+    <child link="hand_spherical_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="10.0"/>
+    <limit effort="200" lower="-100.0" upper="100.0" velocity="1.0"/>
+  </joint>
+
+  <joint name="spherical_joint" type="spherical">
+    <parent link="hand_spherical_link"/>
+    <child link="world"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <limit effort="1000.0" lower="-4" upper="4" velocity="100"/>
+  </joint>
+
+  <link name="world"/>
+  <joint name="world_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+
+ <link name="base_link">
+      <visual>
+          <origin xyz="0.0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/WSG50_110.stl" scale="1 1 1"/>
+          </geometry>
+          <material name="grey">
+		     <color rgba="0.5 0.5 0.5 1"/>
+      	  </material>
+      </visual>
+      <collision>
+          <origin xyz="0.0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/WSG50_110_cvx0.obj" scale="1 1 1"/>
+         </geometry>
+     </collision>
+     <collision>
+          <origin xyz="0.0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/WSG50_110_cvx1.obj" scale="1 1 1"/>
+         </geometry>
+     </collision>
+     <collision>
+          <origin xyz="0.0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/WSG50_110_cvx2.obj" scale="1 1 1"/>
+         </geometry>
+     </collision>
+  </link>
+
+  <joint name="base_joint_gripper_left" type="prismatic">
+     <limit lower="0.0027" upper="0.055" effort="80.0" velocity="1.0"/>
+     <origin xyz="0 0 0" rpy="0 0 0" />
+     <parent link="base_link"/>
+     <child link="gripper_left" />
+     <dynamics friction="1" damping="1" />
+     <axis xyz="-1 0 0"/>
+  </joint>
+
+  <link name="gripper_left">
+      <visual>
+          <origin xyz="0.0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/GUIDE_WSG50_110.stl" scale="0.001 0.001 0.001"/>
+          </geometry>
+          <material name="black">
+		    <color rgba="0 0 0 1"/>
+      	  </material>
+      </visual>
+      <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/GUIDE_WSG50_110_cvx0.obj" scale="0.001 0.001 0.001"/>
+         </geometry>
+     </collision>
+     <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/GUIDE_WSG50_110_cvx1.obj" scale="0.001 0.001 0.001"/>
+         </geometry>
+     </collision>
+     <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/GUIDE_WSG50_110_cvx2.obj" scale="0.001 0.001 0.001"/>
+         </geometry>
+     </collision>
+  </link>
+
+  <!-- LEFT FINGER -->
+  <joint name="guide_joint_finger_left" type="fixed">
+     <origin xyz="0 0 0.023" rpy="0 0 0" />
+     <parent link="gripper_left"/>
+     <child link="finger_left" />
+     <dynamics friction="100" damping="100" />
+     <axis xyz="1 0 0"/>
+     <limit effort="100" velocity="100"/>
+  </joint>
+
+  <link name="finger_left">
+      <visual>
+          <origin xyz="0.0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/WSG-FMF.stl" scale="0.001 0.001 0.001"/>
+          </geometry>
+          <material name="black">
+		    <color rgba="0 0 0 1"/>
+      	  </material>
+      </visual>
+      <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/WSG-FMF_cvx4.obj" scale="0.001 0.001 0.001"/>
+         </geometry>
+     </collision>
+     <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/WSG-FMF_cvx2.obj" scale="0.001 0.001 0.001"/>
+         </geometry>
+     </collision>
+     <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/WSG-FMF_cvx3.obj" scale="0.001 0.001 0.001"/>
+         </geometry>
+     </collision>
+  </link>
+
+  <!-- GRIPPER RIGHT -->
+  <joint name="base_joint_gripper_right" type="prismatic">
+     <limit lower="0.0027" upper="0.055" effort="80.0" velocity="1.0"/>
+     <origin xyz="0 0 0" rpy="0 0 3.14159" />
+     <parent link="base_link"/>
+     <child link="gripper_right" />
+     <axis xyz="-1 0 0"/>
+     <dynamics friction="1" damping="1" />
+     <mimic joint="base_joint_gripper_left"/>
+  </joint>
+
+  <link name="gripper_right">
+      <visual>
+          <origin xyz="0.0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/GUIDE_WSG50_110.stl" scale="0.001 0.001 0.001"/>
+          </geometry>
+          <material name="black">
+		    <color rgba="0 0 0 1"/>
+      	  </material>
+      </visual>
+      <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/GUIDE_WSG50_110_cvx0.obj" scale="0.001 0.001 0.001"/>
+         </geometry>
+     </collision>
+     <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/GUIDE_WSG50_110_cvx1.obj" scale="0.001 0.001 0.001"/>
+         </geometry>
+     </collision>
+     <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/GUIDE_WSG50_110_cvx2.obj" scale="0.001 0.001 0.001"/>
+         </geometry>
+     </collision>
+  </link>
+
+  <!-- RIGHT FINGER -->
+  <joint name="guide_joint_finger_right" type="fixed">
+     <origin xyz="0 0 0.023" rpy="0 0 0" />
+     <parent link="gripper_right"/>
+     <child link="finger_right" />
+     <dynamics friction="100" damping="100" />
+     <axis xyz="1 0 0"/>
+     <limit effort="100" velocity="100"/>
+  </joint>
+
+  <link name="finger_right">
+      <visual>
+          <origin xyz="0.0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/WSG-FMF.stl" scale="0.001 0.001 0.001"/>
+          </geometry>
+          <material name="black">
+		    <color rgba="0 0 0 1"/>
+      	  </material>
+      </visual>
+      <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/WSG-FMF_cvx4.obj" scale="0.001 0.001 0.001"/>
+         </geometry>
+     </collision>
+     <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/WSG-FMF_cvx2.obj" scale="0.001 0.001 0.001"/>
+         </geometry>
+     </collision>
+     <collision>
+          <origin xyz="0 0 0" rpy="0 0 0" />
+          <geometry>
+             <mesh filename="./meshes/WSG-FMF_cvx3.obj" scale="0.001 0.001 0.001"/>
+         </geometry>
+     </collision>
+  </link>
+</robot>
+
+

@@ -1,0 +1,63 @@
+{
+    "open": {
+        "finger_joint": -0.5585
+    },
+    "close": {
+        "finger_joint": 0.7853
+    },
+    "fingertip": [
+        0.0,
+        0.0,
+        0.18
+    ],
+    "sweep_volume": {
+        "extents": [
+            0.102,
+            0.02,
+            0.028
+        ],
+        "offset": [
+            0.0,
+            0.0,
+            0.175
+        ],
+        "extents2": [
+            0.065,
+            0.02,
+            0.028
+        ],
+        "offset2": [
+            0.0,
+            0.0,
+            0.207
+        ]
+    },
+    "links": [
+        "world",
+        "onrobot_rg2_base_link",
+        "left_outer_knuckle",
+        "left_inner_knuckle",
+        "left_inner_finger",
+        "right_outer_knuckle",
+        "right_inner_knuckle",
+        "right_inner_finger"
+    ],
+    "standoff": [
+        0.0,
+        0.04
+    ],
+    "bbox": [
+        [
+            -0.07598464186107479,
+            -0.03587387810517949,
+            1.6115807000005589e-07
+        ],
+        [
+            0.07598464186107355,
+            0.03925267445405202,
+            0.18999123002296422
+        ]
+    ],
+    "symmetric": true,
+    "type": "revolute_2f"
+}

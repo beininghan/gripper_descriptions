@@ -1,0 +1,76 @@
+{
+    "open": {
+        "right_zero_joint": 0,
+        "right_one_joint": 0.9,
+        "right_two_joint": 0,
+        "right_three_joint": 0.4,
+        "right_four_joint": 0,
+        "right_five_joint": 0.4,
+        "right_six_joint": 0
+    },
+    "close": {
+        "right_zero_joint": 0,
+        "right_one_joint": -1.2,
+        "right_two_joint": -1.5,
+        "right_three_joint": 1.84,
+        "right_four_joint": 1.84,
+        "right_five_joint": 1.84,
+        "right_six_joint": 1.84
+    },
+    "fingertip": [
+        0.0,
+        0.0,
+        0.07
+    ],
+    "sweep_volume": {
+        "extents": [
+            0.1,
+            0.06,
+            0.04
+        ],
+        "offset": [
+            0.0,
+            0.0,
+            0.07
+        ],
+        "extents2": [
+            0.04,
+            0.06,
+            0.04
+        ],
+        "offset2": [
+            0.007,
+            0.0,
+            0.06
+        ]
+    },
+    "links": [
+        "world",
+        "right_palm_link",
+        "right_zero_link",
+        "right_one_link",
+        "right_two_link",
+        "right_three_link",
+        "right_four_link",
+        "right_five_link",
+        "right_six_link"
+    ],
+    "standoff": [
+        0.0,
+        0.01
+    ],
+    "bbox": [
+        [
+            -0.10200257043285246,
+            -0.04099982272070905,
+            0.003499878873750528
+        ],
+        [
+            0.12048347587360986,
+            0.041000186172977515,
+            0.09275084269378177
+        ]
+    ],
+    "symmetric": false,
+    "type": "revolute_3f"
+}

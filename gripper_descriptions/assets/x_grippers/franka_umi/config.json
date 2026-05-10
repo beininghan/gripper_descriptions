@@ -1,0 +1,59 @@
+{
+    "open": {
+        "panda_finger_joint1": 0.04
+    },
+    "close": {
+        "panda_finger_joint1": 0.0
+    },
+    "fingertip": [
+        0.0,
+        0.0,
+        0.177
+    ],
+    "sweep_volume": {
+        "extents": [
+            0.08,
+            0.022,
+            0.1
+        ],
+        "offset": [
+            0.0,
+            0.0,
+            0.14
+        ],
+        "extents2": [
+            0.04,
+            0.022,
+            0.1
+        ],
+        "offset2": [
+            0.0,
+            0.0,
+            0.14
+        ]
+    },
+    "links": [
+        "world",
+        "panda_hand",
+        "panda_leftfinger",
+        "panda_rightfinger"
+    ],
+    "standoff": [
+        0,
+        0.04
+    ],
+    "bbox": [
+        [
+            -0.1004258601675494,
+            -0.031635915597160905,
+            -0.02592480182647705
+        ],
+        [
+            0.10398972049475333,
+            0.03161578936421271,
+            0.19176438635127807
+        ]
+    ],
+    "symmetric": true,
+    "type": "parallel_2f"
+}

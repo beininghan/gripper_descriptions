@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="piper">
+   <link name="hand_x_link"></link>
+  <link name="hand_y_link"></link>
+  <link name="hand_z_link"></link>
+  <link name="hand_spherical_link"></link>
+
+  <joint name="hand_x_joint" type="prismatic">
+    <parent link="hand_x_link"/>
+    <child link="hand_y_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <dynamics damping="10.0"/>
+    <limit effort="200" lower="-100.0" upper="100.0" velocity="1.0"/>
+  </joint>
+  <joint name="hand_y_joint" type="prismatic">
+    <parent link="hand_y_link"/>
+    <child link="hand_z_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="10.0"/>
+    <limit effort="200" lower="-100.0" upper="100.0" velocity="1.0"/>
+  </joint>
+  <joint name="hand_z_joint" type="prismatic">
+    <parent link="hand_z_link"/>
+    <child link="hand_spherical_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <dynamics damping="10.0"/>
+    <limit effort="200" lower="-100.0" upper="100.0" velocity="1.0"/>
+  </joint>
+
+  <joint name="spherical_joint" type="spherical">
+    <parent link="hand_spherical_link"/>
+    <child link="world"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <limit effort="1000.0" lower="-4" upper="4" velocity="100"/>
+  </joint>
+
+  <link name="world"/>
+  <joint name="world_joint" type="fixed">
+    <parent link="world"/>
+    <child link="gripper_base"/>
+    <origin rpy="0 0 1.5708" xyz="0 0 0.0"/>
+  </joint>
+
+  <link
+    name="gripper_base">
+    <inertial>
+      <origin
+        xyz="-0.000183807162235591 8.05033155577911E-05 0.0321436689908876"
+        rpy="0 0 0" />
+      <mass
+        value="0.45" />
+      <inertia
+        ixx="0.00092934"
+        ixy="0.00000034"
+        ixz="-0.00000738"
+        iyy="0.00071447"
+        iyz="0.00000005"
+        izz="0.00039442" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./piper_description/meshes/gripper_base_shift.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./piper_description/meshes/gripper_base_shift.STL" />
+      </geometry>
+    </collision>
+  </link> 
+  <link
+    name="link7">
+    <inertial>
+      <origin
+        xyz="0.00065123185041968 -0.0491929869131989 0.00972258769184025"
+        rpy="0 0 0" />
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="0.00007371"
+        ixy="-0.00000113"
+        ixz="0.00000021"
+        iyy="0.00000781"
+        iyz="-0.00001372"
+        izz="0.0000747" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./piper_description/meshes/link7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./piper_description/meshes/link7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint7"
+    type="prismatic">
+    <origin
+      xyz="0 0 0.0708"
+      rpy="1.5708 0 0" />
+    <parent
+      link="gripper_base" />
+    <child
+      link="link7" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.035"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="link8">
+    <inertial>
+      <origin
+        xyz="0.000651231850419722 -0.0491929869131991 0.00972258769184024"
+        rpy="0 0 0" />
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="0.00007371"
+        ixy="-0.00000113"
+        ixz="0.00000021"
+        iyy="0.00000781"
+        iyz="-0.00001372"
+        izz="0.0000747" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./piper_description/meshes/link8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./piper_description/meshes/link8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint8"
+    type="prismatic">
+    <origin
+      xyz="0 0 0.0708"
+      rpy="1.5708 0 -3.1416" />
+    <parent
+      link="gripper_base" />
+    <child
+      link="link8" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.035"
+      upper="0"
+      effort="10"
+      velocity="1" />
+  </joint>
+</robot>

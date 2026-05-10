@@ -1,0 +1,67 @@
+{
+    "open": {
+        "finger_joint": 0.0
+    },
+    "close": {
+        "finger_joint": 0.7
+    },
+    "fingertip": [
+        0.0,
+        0.0,
+        0.195
+    ],
+    "sweep_volume": {
+        "extents": [
+            0.125,
+            0.032,
+            0.062
+        ],
+        "offset": [
+            0.0,
+            0.0,
+            0.175
+        ],
+        "extents2": [
+            0.066,
+            0.032,
+            0.062
+        ],
+        "offset2": [
+            0.0,
+            0.0,
+            0.195
+        ]
+    },
+    "links": [
+        "world",
+        "robotiq_arg2f_base_link",
+        "left_outer_knuckle",
+        "left_outer_finger",
+        "left_inner_finger",
+        "left_inner_finger_pad",
+        "left_inner_knuckle",
+        "right_outer_knuckle",
+        "right_outer_finger",
+        "right_inner_finger",
+        "right_inner_finger_pad",
+        "right_inner_knuckle"
+    ],
+    "standoff": [
+        0.0,
+        0.04
+    ],
+    "bbox": [
+        [
+            -0.10123226633253271,
+            -0.037499989599962404,
+            -0.0027397775556892157
+        ],
+        [
+            0.10123226633253514,
+            0.037499989600156484,
+            0.20946310430272147
+        ]
+    ],
+    "symmetric": true,
+    "type": "revolute_2f"
+}

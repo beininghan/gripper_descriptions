@@ -1,0 +1,79 @@
+{
+    "open": {
+        "thumb_proximal_yaw_joint": 1.308,
+        "thumb_proximal_pitch_joint": 0.0,
+        "index_proximal_joint": 0.0,
+        "middle_proximal_joint": 0.0,
+        "ring_proximal_joint": 0.0,
+        "pinky_proximal_joint": 0.0
+    },
+    "close": {
+        "thumb_proximal_yaw_joint": 1.308,
+        "thumb_proximal_pitch_joint": 0.6,
+        "index_proximal_joint": 1.47,
+        "middle_proximal_joint": 1.47,
+        "ring_proximal_joint": 1.47,
+        "pinky_proximal_joint": 1.47
+    },
+    "fingertip": [
+        0.0,
+        0.0,
+        0.15
+    ],
+    "sweep_volume": {
+        "extents": [
+            0.08,
+            0.045,
+            0.04
+        ],
+        "offset": [
+            0.0,
+            0.0,
+            0.135
+        ],
+        "extents2": [
+            0.04,
+            0.045,
+            0.035
+        ],
+        "offset2": [
+            0.0,
+            0.0,
+            0.118
+        ]
+    },
+    "links": [
+        "world",
+        "hand_base_link",
+        "thumb_proximal_base",
+        "thumb_proximal",
+        "thumb_intermediate",
+        "thumb_distal",
+        "index_proximal",
+        "index_intermediate",
+        "middle_proximal",
+        "middle_intermediate",
+        "ring_proximal",
+        "ring_intermediate",
+        "pinky_proximal",
+        "pinky_intermediate"
+    ],
+    "standoff": [
+        0.0,
+        0.005
+    ],
+    "bbox": [
+      [
+        -0.08946615,
+        -0.05292525,
+        -0.02257955
+      ],
+      [
+        0.07915081,
+        0.02876943,
+        0.16354516
+      ]
+    ],
+    "symmetric": false,
+    "type": "revolute_3f"
+}

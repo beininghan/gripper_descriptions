@@ -1,0 +1,25 @@
+{
+  "open": {
+    "bh_j32_joint": 0,
+    "bh_j12_joint": 0,
+    "bh_j22_joint": 0
+  },
+  "close": {
+    "bh_j32_joint": 2.44,
+    "bh_j12_joint": 2.44,
+    "bh_j22_joint": 2.44
+  },
+  "fingertip": [0.0, 0.0, 0.1],
+  "sweep_volume": {
+    "extents": [
+      0.16,
+      0.04,
+      0.03
+    ],
+    "offset": [
+      0.0,
+      0.0,
+      0.09
+    ]
+  }
+}

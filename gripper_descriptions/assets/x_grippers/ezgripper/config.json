@@ -1,0 +1,62 @@
+{
+    "open": {
+        "left_ezgripper_knuckle_palm_L1_1": 0.9
+    },
+    "close": {
+        "left_ezgripper_knuckle_palm_L1_1": 1.5
+    },
+    "fingertip": [
+        0.0,
+        0.0,
+        0.145
+    ],
+    "sweep_volume": {
+        "extents": [
+            0.102,
+            0.032,
+            0.04
+        ],
+        "offset": [
+            0.0,
+            0.0,
+            0.145
+        ],
+        "extents2": [
+            0.05,
+            0.032,
+            0.035
+        ],
+        "offset2": [
+            0.0,
+            0.0,
+            0.12
+        ]
+    },
+    "links": [
+        "world",
+        "left_ezgripper_palm_link",
+        "left_ezgripper_finger_L1_1",
+        "left_ezgripper_finger_L1_2",
+        "left_ezgripper_finger_L2_1",
+        "left_ezgripper_finger_L2_2"
+    ],
+    "standoff": [
+        0.0,
+        0.02
+    ],
+    "bbox": [
+        [
+            -0.0730890257055405,
+            -0.05028760287324867,
+            -1.2856234471887005e-07
+        ],
+        [
+            0.07308819511959541,
+            0.024756320693738076,
+            0.17140433640332886
+        ]
+    ],
+    "symmetric": true,
+    "type": "revolute_2f"
+
+}
