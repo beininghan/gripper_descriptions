@@ -150,7 +150,7 @@
     <parent link="Palm" />
     <child link="Middle_Proximal" />
     <axis xyz="0 1 0" />
-    <limit lower="0" upper="1774" effort="10" velocity="5" />
+    <limit lower="0" upper="1.774" effort="10" velocity="5" />
   </joint>
   <link name="Middle_Distal">
     <inertial>
