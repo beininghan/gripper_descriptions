@@ -6,41 +6,38 @@ Real-world gripper URDF descriptions, meshes, and configuration files for [Grasp
 
 <table align="center">
   <tr>
-    <td align="center"><img src="figs/abb_yumi.png" width="120"><br><code>abb_yumi</code><br><sub>parallel_2f</sub></td>
-    <td align="center"><img src="figs/arx_x5.png" width="120"><br><code>arx_x5</code><br><sub>revolute_2f</sub></td>
-    <td align="center"><img src="figs/barrett_hand.png" width="120"><br><code>barrett_hand</code><br><sub>revolute_3f</sub></td>
-    <td align="center"><img src="figs/bd_spot.png" width="120"><br><code>bd_spot</code><br><sub>revolute_2f</sub></td>
-    <td align="center"><img src="figs/dh_ag95.png" width="120"><br><code>dh_ag95</code><br><sub>parallel_2f</sub></td>
-    <td align="center"><img src="figs/ezgripper.png" width="120"><br><code>ezgripper</code><br><sub>revolute_2f</sub></td>
-    <td align="center"><img src="figs/fetch_robot.png" width="120"><br><code>fetch_robot</code><br><sub>parallel_2f</sub></td>
-    <td align="center"><img src="figs/franka_panda.png" width="120"><br><code>franka_panda</code><br><sub>parallel_2f</sub></td>
+    <td align="center"><img src="figs/abb_yumi.png" height="120"><br><code>abb_yumi</code><br><sub>parallel_2f</sub></td>
+    <td align="center"><img src="figs/arx_x5.png" height="120"><br><code>arx_x5</code><br><sub>revolute_2f</sub></td>
+    <td align="center"><img src="figs/barrett_hand.png" height="120"><br><code>barrett_hand</code><br><sub>revolute_3f</sub></td>
+    <td align="center"><img src="figs/bd_spot.png" height="120"><br><code>bd_spot</code><br><sub>revolute_2f</sub></td>
+    <td align="center"><img src="figs/dh_ag95.png" height="120"><br><code>dh_ag95</code><br><sub>parallel_2f</sub></td>
+    <td align="center"><img src="figs/ezgripper.png" height="120"><br><code>ezgripper</code><br><sub>revolute_2f</sub></td>
+    <td align="center"><img src="figs/fetch_robot.png" height="120"><br><code>fetch_robot</code><br><sub>parallel_2f</sub></td>
+    <td align="center"><img src="figs/franka_panda.png" height="120"><br><code>franka_panda</code><br><sub>parallel_2f</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="figs/franka_umi.png" width="120"><br><code>franka_umi</code><br><sub>parallel_2f</sub></td>
-    <td align="center"><img src="figs/galaxea_g1.png" width="120"><br><code>galaxea_g1</code><br><sub>revolute_2f</sub></td>
-    <td align="center"><img src="figs/inspire_hand.png" width="120"><br><code>inspire_hand</code><br><sub>revolute_3f</sub></td>
-    <td align="center"><img src="figs/kinova_3f.png" width="120"><br><code>kinova_3f</code><br><sub>revolute_3f</sub></td>
-    <td align="center"><img src="figs/koch_hand.png" width="120"><br><code>koch_hand</code><br><sub>revolute_2f</sub></td>
-    <td align="center"><img src="figs/onrobot_2FG7.png" width="120"><br><code>onrobot_2FG7</code><br><sub>parallel_2f</sub></td>
-    <td align="center"><img src="figs/onrobot_RG2.png" width="120"><br><code>onrobot_RG2</code><br><sub>revolute_2f</sub></td>
-    <td align="center"><img src="figs/onrobot_RG6.png" width="120"><br><code>onrobot_RG6</code><br><sub>revolute_2f</sub></td>
+    <td align="center"><img src="figs/franka_umi.png" height="120"><br><code>franka_umi</code><br><sub>parallel_2f</sub></td>
+    <td align="center"><img src="figs/galaxea_g1.png" height="120"><br><code>galaxea_g1</code><br><sub>revolute_2f</sub></td>
+    <td align="center"><img src="figs/inspire_hand.png" height="120"><br><code>inspire_hand</code><br><sub>revolute_3f</sub></td>
+    <td align="center"><img src="figs/onrobot_RG2.png" height="120"><br><code>onrobot_RG2</code><br><sub>revolute_2f</sub></td>
+    <td align="center"><img src="figs/onrobot_RG6.png" height="120"><br><code>onrobot_RG6</code><br><sub>revolute_2f</sub></td>
+    <td align="center"><img src="figs/piper_hand.png" height="120"><br><code>piper_hand</code><br><sub>revolute_2f</sub></td>
+    <td align="center"><img src="figs/robotiq_2f_140.png" height="120"><br><code>robotiq_2f_140</code><br><sub>revolute_2f</sub></td>
+    <td align="center"><img src="figs/robotiq_2f_85.png" height="120"><br><code>robotiq_2f_85</code><br><sub>revolute_2f</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="figs/piper_hand.png" width="120"><br><code>piper_hand</code><br><sub>revolute_2f</sub></td>
-    <td align="center"><img src="figs/robotiq_2f_140.png" width="120"><br><code>robotiq_2f_140</code><br><sub>revolute_2f</sub></td>
-    <td align="center"><img src="figs/robotiq_2f_85.png" width="120"><br><code>robotiq_2f_85</code><br><sub>revolute_2f</sub></td>
-    <td align="center"><img src="figs/robotiq_3f.png" width="120"><br><code>robotiq_3f</code><br><sub>revolute_3f</sub></td>
-    <td align="center"><img src="figs/robotiq_hande.png" width="120"><br><code>robotiq_hande</code><br><sub>parallel_2f</sub></td>
-    <td align="center"><img src="figs/sawyer_hand.png" width="120"><br><code>sawyer_hand</code><br><sub>parallel_2f</sub></td>
-    <td align="center"><img src="figs/schunk_wsg50.png" width="120"><br><code>schunk_wsg50</code><br><sub>parallel_2f</sub></td>
-    <td align="center"><img src="figs/surge_hand.png" width="120"><br><code>surge_hand</code><br><sub>revolute_3f</sub></td>
+    <td align="center"><img src="figs/robotiq_3f.png" height="120"><br><code>robotiq_3f</code><br><sub>revolute_3f</sub></td>
+    <td align="center"><img src="figs/robotiq_hande.png" height="120"><br><code>robotiq_hande</code><br><sub>parallel_2f</sub></td>
+    <td align="center"><img src="figs/sawyer_hand.png" height="120"><br><code>sawyer_hand</code><br><sub>parallel_2f</sub></td>
+    <td align="center"><img src="figs/schunk_wsg50.png" height="120"><br><code>schunk_wsg50</code><br><sub>parallel_2f</sub></td>
+    <td align="center"><img src="figs/sharpa_wave.png" height="120"><br><code>sharpa_wave</code><br><sub>revolute_3f</sub></td>
+    <td align="center"><img src="figs/surge_hand.png" height="120"><br><code>surge_hand</code><br><sub>revolute_3f</sub></td>
+    <td align="center"><img src="figs/tesollo_delto2f.png" height="120"><br><code>tesollo_delto2f</code><br><sub>revolute_2f</sub></td>
+    <td align="center"><img src="figs/unitree_g1.png" height="120"><br><code>unitree_g1</code><br><sub>revolute_2f</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="figs/tesollo_delto2f.png" width="120"><br><code>tesollo_delto2f</code><br><sub>revolute_2f</sub></td>
-    <td align="center"><img src="figs/tesollo_delto3f.png" width="120"><br><code>tesollo_delto3f</code><br><sub>revolute_3f</sub></td>
-    <td align="center"><img src="figs/unitree_g1.png" width="120"><br><code>unitree_g1</code><br><sub>revolute_2f</sub></td>
-    <td align="center"><img src="figs/wuji.png" width="120"><br><code>wuji</code><br><sub>revolute_3f</sub></td>
-    <td align="center"><img src="figs/xarm_hand.png" width="120"><br><code>xarm_hand</code><br><sub>revolute_2f</sub></td>
+    <td align="center"><img src="figs/wuji_hand.png" height="120"><br><code>wuji_hand</code><br><sub>revolute_3f</sub></td>
+    <td align="center"><img src="figs/xarm_hand.png" height="120"><br><code>xarm_hand</code><br><sub>revolute_2f</sub></td>
   </tr>
 </table>
 
