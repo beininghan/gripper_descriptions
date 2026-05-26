@@ -272,9 +272,8 @@ def visualize_pointcloud(
                     padding = np.tile(color[-1:], (num_points - color.shape[0], 1))
                     color = np.vstack([color, padding])
 
-        color = color.astype(np.float32)
-        if color.size > 0 and color.max() <= 1.0:
-            color = (color * 255).astype(np.uint8)
+        if np.issubdtype(color.dtype, np.floating):
+            color = np.clip(color * 255.0, 0, 255).astype(np.uint8)
         else:
             color = np.clip(color, 0, 255).astype(np.uint8)
     else:
