@@ -110,7 +110,3 @@ Each gripper directory contains:
 | `selected_pts.json` | Inner-surface point clouds (open/mid/close) |
 | `tsdf.npy` | Truncated signed distance fields |
 | `proc_gripper_only_pointnet_vae_repr.json` | PointNet VAE embedding (64-D) |
-
-## License
-
-NVIDIA Corporation. See individual gripper directories for source attribution.
