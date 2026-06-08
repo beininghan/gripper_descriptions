@@ -52,6 +52,8 @@ Or directly from the repository:
 pip install -e git+ssh://git@gitlab-master.nvidia.com:12051/rays2torques/graspgen/gripper_descriptions.git#egg=gripper_descriptions
 ```
 
+If the git lfs clone failed, download the assets from: https://drive.google.com/file/d/1_GlOZjy5treLxb3Q30V3VdMlssOIWdy0/view?usp=sharing and put it under gripper_descriptions/assets/ .
+
 ## Usage
 
 ```python
